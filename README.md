@@ -1,1 +1,1 @@
-Blog do Maykon
+~Blog do Maykon
