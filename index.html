@@ -1,138 +1,125 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog do Maykon | Veigh</title>
-    <style>
-        /* Paleta de Cores combinando com a Foto do Jatinho/Carro Azul */
-        :root {
-            --azul-claro-casaco: #8ECAFF;   /* Azul do casaco do Veigh */
-            --azul-escuro-carro: #1C355E;   /* Azul escuro profundo do carro */
-            --fundo-pagina: #111622;         /* Fundo escuro moderno estilo trap */
-            --fundo-card: #1B2336;           /* Fundo do texto */
-            --texto-principal: #F4F7F6;     /* Texto claro para leitura no escuro */
-            --texto-secundario: #A0AEC0;    /* Detalhes em cinza */
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blog do Maykon | Veigh</title>
 
-        
-        body {
-            background-color: var(--fundo-pagina);
-            margin: 0;
-            padding: 0;
-            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-            color: var(--texto-principal);
-            -webkit-font-smoothing: antialiased;
-        }
+<style>
+body {
+margin: 0;
+font-family: Arial, Helvetica, sans-serif;
+background-color: #d9d9d9;
+}
 
-        
-        header {
-            background: linear-gradient(135deg, var(--azul-escuro-carro), #0D1B2A);
-            color: white;
-            text-align: center;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 40px 24px;
-            border-bottom-left-radius: 16px;
-            border-bottom-right-radius: 16px;
-            box-shadow: 0 4px 25px rgba(0, 0, 0, 0.4);
-            border: 1px solid rgba(142, 202, 255, 0.1);
-        }
+header {
+background-color: #1C355E; /* Azul escuro do carro */
+color: #beb8b8;
+text-align: center;
+max-width: 800px;
+margin: 20px auto 0;
+border: solid 1px #1C355E;
+padding: 16px;
+}
+main {
+background-color: #24302b; /* Fundo do seu layout */
+color: white;
+max-width: 800px;
+margin: 0 auto 20px;
+padding: 20px;
+border-radius: 8px;
+}
+img {
+max-width: 100%;
+width: 500px; /* Tamanho controlado para dar espaço aos botões */
+height: auto; 
+border-radius: 8px;
+margin: 15px auto;
+display: block;
+}
+.conteudo {
+line-height: 1.8;
+}
+.artigo-autor {
+font-weight: bold;
+margin-top: 20px;
+color: #a8c4c0;
+}
+/* Área exclusiva dos botões para garantir visibilidade */
+.botoes-reacao {
+margin-top: 25px;
+padding-top: 15px;
+border-top: 1px solid #444;
+}
+button {
+font-size: 24px;
+padding: 10px 20px;
+border: none;
+border-radius: 50px;
+cursor: pointer;
+margin-right: 15px;
+display: inline-block;
+}
+/* Cor do botão Joia: Azul claro do casaco */
+.btn-curtir {
+background-color: #8ECAFF;
+color: #1C355E;
+font-weight: bold;
+}
+/* Cor do botão Não Joia: Cinza claro */
+.btn-descurtir {
+background-color: #beb8b8;
+color: #1C355E;
+font-weight: bold;
+}
 
-        header h1 {
-            margin: 0 0 10px 0;
-            font-size: 2.8em;
-            letter-spacing: 1px;
-            color: var(--azul-claro-casaco);
-            text-shadow: 0 2px 10px rgba(142, 202, 255, 0.3);
-        }
-
-        header h2 {
-            font-size: 1.4em;
-            margin-top: 25px;
-            border-top: 1px solid rgba(142, 202, 255, 0.2);
-            padding-top: 20px;
-            font-weight: 600;
-            color: var(--azul-claro-casaco);
-        }
-
-        header p {
-            font-size: 1.1em;
-            line-height: 1.6;
-            color: var(--texto-secundario);
-            max-width: 700px;
-            margin: 10px auto 0 auto;
-        }
-
-        /* Conteúdo do Texto */
-        .conteudo-blog {
-            max-width: 800px;
-            margin: 30px auto;
-            padding: 30px 24px;
-            box-sizing: border-box;
-            background-color: var(--fundo-card);
-            border-radius: 16px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-            border: 1px solid rgba(255, 255, 255, 0.05);
-        }
-
-        .conteudo-blog p {
-            margin-bottom: 20px;
-            text-align: justify;
-            line-height: 1.8;
-            font-size: 1.1em;
-            text-indent: 20px;
-            color: var(--texto-principal);
-        }
-
-        /* Área da Imagem */
-        .container-imagem {
-            display: flex;
-            justify-content: center;
-            margin: 40px 0 10px 0;
-        }
-
-        .foto-veigh {
-            max-width: 100%;
-            width: 600px; 
-            height: auto;
-            border-radius: 12px; 
-            box-shadow: 0 10px 30px rgba(142, 202, 255, 0.15); 
-            border: 2px solid var(--azul-claro-casaco);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .foto-veigh:hover {
-            transform: scale(1.02);
-            box-shadow: 0 10px 35px rgba(142, 202, 255, 0.3);
-        }
-    </style>
+button:hover {
+opacity: 0.8;
+}
+</style>
 </head>
 <body>
+<header>
+<h1>Veigh OVTM</h1>
+<p>Veigh é muito conhecido por suas músicas e letras de superação.</p>
+</header>
+<main>
+<div class="conteudo">
+<p><strong>Irei contar a história dele para vocês</strong></p>
+<p>
+Thiago Veigh nasceu e cresceu na Cohab 1, em Itapevi (SP). Sua infância e adolescência foram marcadas pela realidade simples da periferia, onde jogava bola e convivia intensamente com a comunidade dos blocos de apartamentos. A música entrou cedo em sua vida por influência da família, que ouvia muito Rap Nacional, R&B e Pagode — gêneros que moldaram seu estilo melódico atual. Para ajudar em casa e buscar independência, começou a trabalhar cedo, atuando como auxiliar de carga e descarga e atendente de telemarketing. Em 2017, começou a rimar com amigos e, após vencer um concurso na internet, uniu-se ao produtor Nagalli. Ele usou as parcelas do seu seguro-desemprego para focar na música e estourou com o hit "Foto do Corte" (2021), iniciando sua trajetória rumo ao topo do trap nacional.
+</p>
+<p>Ele começou no rap com um grupo de amigos de Itapevi chamado Constelação isso em 2019.</p>
+<p>Na época, eles gravavam músicas românticas. O ponto de virada aconteceu quando Veigh venceu um concurso de rimas na internet.</p>
+<p>O prêmio era gravar uma música com o renomado produtor Nagalli.</p>
+<p>Essa parceria deu tão certo que eles fundaram a gravadora Super Nova Entertainment. O sucesso nacional bateu à porta com a música "Foto do Corte".</p>
+<p>Veigh escreveu essa letra logo após ser demitido do seu emprego de telemarketing, usando o dinheiro do seguro-desemprego para se manter focado na música em 2022.</p>
 
-    <header> 
-        <h1>veigh OV🌍M</h1>
-        <p>Veigh é muito conhecido por suas músicas e letras de superação.</p>
-        <h2>Irei contar a história dele para vocês</h2>
-        <p>Thiago Veigh nasceu e cresceu na Cohab 1, em Itapevi (SP). Sua infância e adolescência foram marcadas pela realidade simples da periferia, onde jogava bola e convivia intensamente com a comunidade dos blocos de apartamentos. A música entrou cedo em sua vida por influência da família, que ouvia muito Rap Nacional, R&B e Pagode — gêneros que moldaram seu estilo melódico atual. Para ajudar em casa e buscar independência, começou a trabalhar cedo, atuando como auxiliar de carga e descarga e atendente de telemarketing. Em 2017, começou a rimar com amigos e, após vencer um concurso na internet, uniu-se ao produtor Nagalli. Ele usou as parcelas do seu seguro-desemprego para focar na música e estourou com o hit "Foto do Corte" (2021), iniciando sua trajetória rumo ao topo do trap nacional.</p>
-    </header>
+<!-- Imagem otimizada -->
+<img src="https://imgbox.com" alt="Veigh com seu Jatinho e Mercedes Azul">
 
-    <main class="conteudo-blog">
-        <p>Ele começou no rap com um grupo de amigos de Itapevi chamado Constelação isso em 2019.</p>
-        <p>Na época, eles gravavam músicas românticas. O ponto de virada aconteceu quando Veigh venceu um concurso de rimas na internet.</p>
-        <p>O prêmio era gravar uma música com o renomado produtor Nagalli.</p>
-        <p>Essa parceria deu tão certo que eles fundaram a gravadora Super Nova Entertainment. O sucesso nacional bateu à porta com a música "Foto do Corte".</p>
-        <p>Veigh escreveu essa letra logo após ser demitido do seu emprego de telemarketing, usando o dinheiro do seguro-desemprego para se manter focado na música em 2022.</p>
+<p class="artigo-autor">Por: Maykon</p>
 
-        <!-- Imagem carregando localmente do seu próprio computador -->
-        <div class="container-imagem">
-            <img 
-                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRk6K5XpW7Jca8XNrUotN2hIXIWB3WR0nwRPzKvS4-Gfg&s=10" 
-                alt="Foto do cantor Veigh" 
-                class="foto-veigh"
-            >
-        </div>
-    </main>
-
+<!-- Caixa isolada de botões -->
+<div class="botoes-reacao">
+    <button>👍🏻<span>0</span></button>
+    <button>👎🏻<button>
+</div>
+</main>
 </body>
+<script>
+    const botoes = document.querySelectorAll("button");//variável para acessar o botão.
+
+    botoes.forEach(function(botao){
+botao.addEventListener("click", botaoClicado);//quando acontecer um clique, será executada uma função chamada botaoClicado.
+    
+    
+    function botaoClicado() { //cria uma função chamada botaoClicado.
+    console.log("fui clicado");// exibe uma mensagem no console.
+    let texto = botao.querySelector("span");////seleciona o elemento "span" que esta dentro do botão e o guarda na variavel texto.
+    texto.textContent++;// soma 1 ao valor atual. Assim, o contador aumenta a cada clique.
+
+    }
+})
+    </script>
 </html>
