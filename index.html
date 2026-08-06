@@ -9,78 +9,118 @@
 body {
 margin: 0;
 font-family: Arial, Helvetica, sans-serif;
-background-color: #d9d9d9;
+background-color: #0b1520; /* Azul escuro inspirado nas sombras da arquibancada */
+color: #e2eaf0; /* Texto claro azulado */
 }
 
 header {
-background-color: #1C355E; /* Azul escuro do carro */
-color: #beb8b8;
+background-color: #050a10; /* Contraste bem escuro para o topo */
+color: #61daff; /* Azul celeste brilhante que imita os canhões de luz de fundo */
 text-align: center;
 max-width: 800px;
-margin: 20px auto 0;
-border: solid 1px #1C355E;
-padding: 16px;
+margin: 30px auto 0;
+border: solid 1px #1d334a;
+border-radius: 12px 12px 0 0;
+padding: 24px;
+box-shadow: 0 4px 20px rgba(97, 218, 255, 0.1);
 }
+
+header p {
+color: #8fa3b7; 
+margin: 8px 0 0;
+font-size: 16px;
+}
+
 main {
-background-color: #24302b; /* Fundo do seu layout */
-color: white;
+background-color: #122236; /* Tom médio azulado extraído diretamente das cadeiras D-320 */
 max-width: 800px;
-margin: 0 auto 20px;
-padding: 20px;
-border-radius: 8px;
+margin: 0 auto 30px;
+padding: 30px;
+border-radius: 0 0 12px 12px;
+border: solid 1px #1d334a;
+border-top: none;
+box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+box-sizing: border-box;
 }
+article{
+    display: flex;
+}
+    
 img {
 max-width: 100%;
-width: 500px; /* Tamanho controlado para dar espaço aos botões */
+width: 500px; 
 height: auto; 
 border-radius: 8px;
-margin: 15px auto;
+margin: 25px auto;
 display: block;
+border: 2px solid #314d6c; /* Moldura fosca combinando com a numeração dos assentos */
+box-shadow: 0 0 20px rgba(97, 218, 255, 0.15);
 }
+
 .conteudo {
 line-height: 1.8;
+font-size: 16px;
+color: #cbd5e1;
 }
+
 .artigo-autor {
 font-weight: bold;
-margin-top: 20px;
-color: #a8c4c0;
-}
-/* Área exclusiva dos botões para garantir visibilidade */
-.botoes-reacao {
 margin-top: 25px;
-padding-top: 15px;
-border-top: 1px solid #444;
+color: #61daff; 
+font-size: 14px;
+letter-spacing: 0.5px;
 }
+
+.botoes-reacao {
+margin-top: 30px;
+padding-top: 20px;
+border-top: 1px solid #1d334a;
+display: flex;
+gap: 15px;
+}
+
 button {
-font-size: 24px;
-padding: 10px 20px;
+font-size: 18px;
+padding: 12px 24px;
 border: none;
 border-radius: 50px;
 cursor: pointer;
-margin-right: 15px;
-display: inline-block;
+font-weight: bold;
+display: inline-flex;
+align-items: center;
+gap: 8px;
+transition: all 0.2s ease;
+box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
-/* Cor do botão Joia: Azul claro do casaco */
+
+/* Botão Curtir: Azul Gelo Luminoso */
 .btn-curtir {
-background-color: #8ECAFF;
-color: #1C355E;
-font-weight: bold;
+background-color: #214066;
+color: #61daff;
+border: 1px solid #61daff;
 }
-/* Cor do botão Não Joia: Cinza claro */
+
+/* Botão Descurtir: Tons escuros frios */
 .btn-descurtir {
-background-color: #beb8b8;
-color: #1C355E;
-font-weight: bold;
+background-color: #1a2736;
+color: #8fa3b7;
+border: 1px solid #283d54;
 }
 
 button:hover {
-opacity: 0.8;
+transform: translateY(-2px);
+opacity: 0.9;
+box-shadow: 0 6px 12px rgba(97, 218, 255, 0.2);
+}
+
+button:active {
+transform: translateY(0);
 }
 </style>
 </head>
 <body>
 <header>
-<h1>Veigh OVTM</h1>
+<h1>Veigh OV🌏M</h1>
 <p>Veigh é muito conhecido por suas músicas e letras de superação.</p>
 </header>
 <main>
@@ -95,31 +135,31 @@ Thiago Veigh nasceu e cresceu na Cohab 1, em Itapevi (SP). Sua infância e adole
 <p>Essa parceria deu tão certo que eles fundaram a gravadora Super Nova Entertainment. O sucesso nacional bateu à porta com a música "Foto do Corte".</p>
 <p>Veigh escreveu essa letra logo após ser demitido do seu emprego de telemarketing, usando o dinheiro do seguro-desemprego para se manter focado na música em 2022.</p>
 
-<!-- Imagem otimizada -->
-<img src="https://imgbox.com" alt="Veigh com seu Jatinho e Mercedes Azul">
+<!-- Link direto oficial da imagem de Mônaco Freestyle integrado abaixo -->
+<img src="https://www.jornaldorap.com.br/wp-content/uploads/2025/02/Veigh-MonacoFreestyle-creditoAlissonGabriel-960x640.jpg" alt="Veigh em Mônaco Freestyle">
 
 <p class="artigo-autor">Por: Maykon</p>
 
-<!-- Caixa isolada de botões -->
 <div class="botoes-reacao">
-    <button>👍🏻<span>0</span></button>
-    <button>👎🏻<button>
+    <button class="btn-curtir">👍🏻 <span>0</span></button>
+    <button class="btn-descurtir">👎🏻 <span>0</span></button>
 </div>
 </main>
-</body>
+
 <script>
-    const botoes = document.querySelectorAll("button");//variável para acessar o botão.
+    const botoes = document.querySelectorAll(".botoes-reacao button");
 
     botoes.forEach(function(botao){
-botao.addEventListener("click", botaoClicado);//quando acontecer um clique, será executada uma função chamada botaoClicado.
-    
-    
-    function botaoClicado() { //cria uma função chamada botaoClicado.
-    console.log("fui clicado");// exibe uma mensagem no console.
-    let texto = botao.querySelector("span");////seleciona o elemento "span" que esta dentro do botão e o guarda na variavel texto.
-    texto.textContent++;// soma 1 ao valor atual. Assim, o contador aumenta a cada clique.
-
-    }
-})
-    </script>
+        botao.addEventListener("click", botaoClicado);
+        
+        function botaoClicado() { 
+            console.log("fui clicado");
+            let texto = botao.querySelector("span");
+            if (texto) {
+                texto.textContent++; 
+            }
+        }
+    });
+</script>
+</body>
 </html>
